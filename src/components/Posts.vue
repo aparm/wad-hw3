@@ -12,11 +12,16 @@
 
 <script>
 export default {
-  props:['postList'],
   data:function () {
     return {}
+  },
+  computed: {
+    postList(){
+      return this.$store.state.postList
+    }
   }
 }
+
 </script>
 
 <style>
