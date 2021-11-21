@@ -1,9 +1,12 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link :to="{ name: 'About' }">About</router-link> |
-    <router-link :to="{ name: 'Contacts' }">Contacts</router-link>
+  <div id="header">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link :to="{ name: 'About' }">About</router-link> |
+      <router-link :to="{ name: 'Contacts' }">Contacts</router-link>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -13,6 +16,15 @@ export default {
 </script>
 
 <style>
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 85px;
+  background: white;
+}
+
 #nav {
   padding: 30px;
 }

@@ -10,7 +10,7 @@
 <style>
 .about {
   width: 60%;
-  margin: auto;
+  margin: 100px auto;
 }
 
 .about p {

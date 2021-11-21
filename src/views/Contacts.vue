@@ -9,6 +9,7 @@
 
 <style>
 .contacts {
-  margin-top: 90px;
+  margin-top: 140px;
+  margin-bottom: 80px;
 }
 </style>

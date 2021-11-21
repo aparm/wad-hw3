@@ -20,6 +20,7 @@ export default {
   methods: {
     ResetLikes: function () {
       this.$store.dispatch("ResetLikesAct");
+      //console.log(this.$store.state.postList);
     }
   }
 }
@@ -28,6 +29,7 @@ export default {
 <style>
 .home {
   margin-bottom: 80px;
+  margin-top: 100px;
 }
 
 .reset-likes {
