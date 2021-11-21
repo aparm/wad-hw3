@@ -6,7 +6,7 @@
     </div>
     <img class="post-image" v-bind:src="postItem.image">
     <p class="post-text">{{ postItem.text }}</p>
-    <button class="like-button">{{ postItem.likes }}</button>
+    <button class="like-button" v-on:click="LikeClick(postItem.id)">{{ postItem.likes }}</button>
   </div>
 </template>
 
@@ -19,9 +19,20 @@ export default {
     postList(){
       return this.$store.state.postList
     }
+  },
+
+  methods: {
+    /*
+    LikeClick: function (id) {
+      this.$store.state.postList.forEach(post => {
+        if (post.id === id) post.likes += 1;
+      });
+    }*/
+    LikeClick: function (id) {
+      this.$store.dispatch("IncreaseLikesAct", id);
+    }
   }
 }
-
 </script>
 
 <style>

@@ -96,8 +96,28 @@ export default createStore({
     ]
   },
   mutations: {
+    IncreaseLikes(state, id) {
+      state.postList.forEach(post =>{
+        if (post.id === id) post.likes += 1;
+      })
+    },
+    ResetLikes: state => {
+      state.postList.forEach(post => {
+        post.likes = 0;
+      })
+    }
   },
   actions: {
+    IncreaseLikesAct(act, id) {
+      setTimeout(function () {
+        act.commit("IncreaseLikes", id)
+      }, 300)
+    },
+    ResetLikesAct: act => {
+      setTimeout(function (){
+        act.commit("ResetLikes")
+      }, 500)
+    }
   },
   modules: {
   }
