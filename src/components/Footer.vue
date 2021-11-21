@@ -25,6 +25,14 @@ export default {
 #footer a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#footer a:hover {
+  color: white;
+  background: #2c3e50;
 }
 
 </style>
