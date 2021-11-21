@@ -1,18 +1,21 @@
 <template>
-  <div class="post">
+  <div class="post" v-for="postItem in postList" :key="postItem.id">
     <div class="post-info">
-      <img class="post-author-photo" v-bind:src="authorPhoto">
-      <p class="date">{{ date }}</p>
+      <img class="post-author-photo" :src="(postItem.authorPhoto != null) ? postItem.authorPhoto : require('@/assets/user.png')">
+      <p class="date">{{ postItem.date }}</p>
     </div>
-    <img class="post-image" v-bind:src="image">
-    <p class="post-text">{{ text }}</p>
-    <button class="like-button">{{ likes }}</button>
+    <img class="post-image" v-bind:src="postItem.image">
+    <p class="post-text">{{ postItem.text }}</p>
+    <button class="like-button">{{ postItem.likes }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  props:['id', 'authorPhoto', 'date', 'image', 'text', 'likes']
+  props:['postList'],
+  data:function () {
+    return {}
+  }
 }
 </script>
 
